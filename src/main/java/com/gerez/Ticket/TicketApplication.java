@@ -14,6 +14,11 @@ public class TicketApplication {
 		SpringApplication.run(TicketApplication.class, args);
 	}
 
+	@GetMapping("/login")
+	public String hello2(@RequestParam(value = "name", defaultValue = "Logic") String name) {
+		return String.format("TODO: %s!", name);
+	}
+
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("Hello %s!", name);
