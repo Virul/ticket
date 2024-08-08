@@ -43,8 +43,8 @@ public class User {
         this.password = password;
     }
 
-    public Set<javax.management.relation.Role> getRoles() {
-        return null;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
     public void setEnabled(boolean enabled) {
@@ -54,5 +54,7 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+
 }
 
