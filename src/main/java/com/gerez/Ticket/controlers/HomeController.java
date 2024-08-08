@@ -20,6 +20,16 @@ public class HomeController {
         boolean isAdmin = authentication.getAuthorities().stream()
                 .anyMatch(authority -> authority.getAuthority().equals("ROLE_ADMIN"));
         model.addAttribute("isAdmin", isAdmin);
+
+        boolean isLider = authentication.getAuthorities().stream()
+                .anyMatch(authority -> authority.getAuthority().equals("ROLE_LIDER"));
+        model.addAttribute("isLider", isLider);
+
+        boolean isTi = authentication.getAuthorities().stream()
+                .anyMatch(authority -> authority.getAuthority().equals("ROLE_SISTEMA"));
+        model.addAttribute("isTi", isTi);
+
+
         return "home";
     }
 

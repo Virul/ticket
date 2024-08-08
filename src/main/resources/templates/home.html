@@ -9,6 +9,10 @@
 <div th:if="${isAdmin}">
     <a href="/admin/add_user">Agregar Usuario</a>
 </div>
+<div th:if="${isLider}">
+    <a href="/Ticket/add_ticket">Captura ticket</a>
+</div>
+
 <a th:href="@{/logout}">Salir</a>
 </body>
 </html>
