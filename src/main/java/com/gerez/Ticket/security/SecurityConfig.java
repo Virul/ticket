@@ -16,10 +16,16 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/blog/**").permitAll()
+                        .requestMatchers("/plugins/**", "/css/**", "/js/**", "/images/**", "/dist/**").permitAll()  // Permitir acceso a recursos estáticos
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin

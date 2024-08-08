@@ -43,13 +43,16 @@ public class User {
         this.password = password;
     }
 
-
-
-
-
-
     public Set<javax.management.relation.Role> getRoles() {
         return null;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }
 
