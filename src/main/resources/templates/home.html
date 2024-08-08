@@ -1,18 +1,107 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Top Navigation</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
 </head>
-<body>
-<h1>Bienvenido, <span th:text="${username}"></span>!</h1>
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
 
-<div th:if="${isAdmin}">
-    <a href="/admin/add_user">Agregar Usuario</a>
-</div>
-<div th:if="${isLider}">
-    <a href="/Ticket/add_ticket">Captura ticket</a>
-</div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+        <div class="container">
 
-<a th:href="@{/logout}">Salir</a>
+            LOGO
+            <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <h1>Bienvenido, <span th:text="${username}"></span></h1>
+                </div>
+                    <div th:if="${isAdmin}">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <a href="/admin/add_user">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info"><i class="fa fa-user"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Nuevo Usuario</span>
+                                        <span class="info-box-number">Agregar nuevo usuario al sistema.</span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <a th:href="@{/logout}">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-info"><i class="fa fa-power-off"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Salir</span>
+                                    <span class="info-box-number">Salir del sistema</span>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <div th:if="${isLider}">
+                        <a href="/admin/add_user">Agregar Usuario</a>
+                        <a href="/Ticket/add_ticket">Captura ticket</a>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2024.</strong> All rights reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
 </body>
 </html>
