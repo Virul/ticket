@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Set;
 
@@ -15,7 +16,7 @@ import java.util.Set;
 public class DataLoader {
 
     @Bean
-    public CommandLineRunner loadData(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder passwordEncoder) {
+    public CommandLineRunner loadData(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
         return args -> {
             // Crear roles si no existen
             Role adminRole = roleRepository.findByName("ROLE_ADMIN");
@@ -26,11 +27,11 @@ public class DataLoader {
             }
 
             // Crear un usuario administrador
-            User admin = userRepository.findByUsername("a");
+            User admin = userRepository.findByUsername("admin");
             if (admin == null) {
                 admin = new User();
-                admin.setUsername("a");
-                admin.setPassword("1234");
+                admin.setUsername("admin");
+                admin.setPassword(passwordEncoder.encode("admin"));
                 admin.setEnabled(true);
                 admin.setRoles(Set.of(adminRole));
                 userRepository.save(admin);
