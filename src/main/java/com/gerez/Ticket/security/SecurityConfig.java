@@ -31,12 +31,17 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/plugins/**", "/css/**", "/js/**", "/images/**", "/dist/**").permitAll()  // Permitir acceso a recursos estáticos
+                        .requestMatchers("/plugins/**", "/css/**", "/js/**", "/images/**", "/dist/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .defaultSuccessUrl("/home", true)
+                        .permitAll()
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login?logout")
                         .permitAll()
                 )
                 .rememberMe(Customizer.withDefaults())

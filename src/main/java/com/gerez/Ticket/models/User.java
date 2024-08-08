@@ -3,6 +3,7 @@ package com.gerez.Ticket.models;
 
 import jakarta.persistence.*;
 import java.util.Set;
+import jakarta.validation.Valid;
 
 @Entity
 @Table(name = "users")

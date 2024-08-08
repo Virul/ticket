@@ -36,12 +36,10 @@ public class MyUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("Usuario no encontrado");
         }
-        System.out.println(user.getPassword());
         return new org.springframework.security.core.userdetails.User(user.getUsername() , user.getPassword(),  getAuthorities(user) );
     }
 
     private Collection<? extends GrantedAuthority> getAuthorities(User user) {
-        System.out.println("Entra aqui " +  user.getUsername());
         return user.getRoles().stream()
                 .map(role -> new SimpleGrantedAuthority(role.getName()))
                 .collect(Collectors.toList());
