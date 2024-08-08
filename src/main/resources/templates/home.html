@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Bienvenido, <span th:text="${username}"></span>!</h1>
+
+<div th:if="${isAdmin}">
+    <a href="/admin/add_user">Agregar Usuario</a>
+</div>
+</body>
+</html>
