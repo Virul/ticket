@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class TicketApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TicketApplication.class, args);
+	}
+
+	@GetMapping("/login3")
+	public String hello2(@RequestParam(value = "name", defaultValue = "Logic") String name) {
+		return String.format("TODO: %s!", name);
 	}
 
 	@GetMapping("/hello")

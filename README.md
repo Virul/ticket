@@ -23,7 +23,7 @@ git clone https://github.com/Virul/ticket
 
 CREATE DATABASE ticket;
 
-CREATE USER 'ticket_user'@'localhost' IDENTIFIED BY ticket_password;
+CREATE USER 'ticket_user'@'localhost' IDENTIFIED BY 'ticket_password';
 GRANT ALL PRIVILEGES ON ticket.* TO 'ticket_user'@'localhost';
 FLUSH PRIVILEGES;
 
