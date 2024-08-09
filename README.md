@@ -25,25 +25,45 @@ Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cump
 1. **Descarga** el repositorio desde GitHub usando el siguiente comando:
    ```bash
    git clone https://github.com/Virul/ticket
-```
+   ```
+2. Navegar al Directorio del Proyecto
+   Después de clonar el repositorio, navega al directorio del proyecto:
+   ```bash
+   cd ticket
+   ```
+3. Ejecutar un Comando de Spring Boot
+   ```bash
+   ./gradlew bootRun
+   ```
+4. **Accede** a la aplicación en tu navegador
+   ```
+   http://localhost:8080
+   ```
 
-***** Base de datos *****
+### Configuración
 
+1. Crear la Base de Datos en MySQL
+Primero, necesitas crear una base de datos donde se almacenarán los datos de tu aplicación:
+   ```sql
+   CREATE DATABASE ticket;
+   ```
+2. Crear un Usuario MySQL y Asignar Privilegios
+Después de crear la base de datos, puedes crear un usuario y otorgarles los privilegios necesarios para acceder a la base de datos:
+   ``` sql
+   CREATE USER 'ticket_user'@'localhost' IDENTIFIED BY 'ticket_password';
+   GRANT ALL PRIVILEGES ON ticket.* TO 'ticket_user'@'localhost';
+   FLUSH PRIVILEGES;
+   ```
+   Nota: ticket_user y ticket_password son ejemplos. Asegúrate de reemplazar 'ticket_user' y 'ticket_password' con tu propio nombre de usuario y contraseña que deseas utilizar para acceder a la base de datos.
 
-CREATE DATABASE ticket;
-
-CREATE USER 'ticket_user'@'localhost' IDENTIFIED BY 'ticket_password';
-GRANT ALL PRIVILEGES ON ticket.* TO 'ticket_user'@'localhost';
-FLUSH PRIVILEGES;
-
-Actualiza las credenciales de MySQL en el archivo de configuración de Spring (application.properties o application.yml):
-
-spring.datasource.url=jdbc:mysql://localhost:3306/ticket
-
-spring.datasource.username=usuario*
-
-spring.datasource.password=contraseña*
-
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+3. Configurar las Credenciales en Spring Boot
+Después de configurar la base de datos y crear un usuario, necesitas actualizar las credenciales en el archivo de configuración de Spring Boot application.properties.
+   ```
+   spring.datasource.url=jdbc:mysql://localhost:3306/ticket
+   spring.datasource.username=usuario*
+   spring.datasource.password=contraseña*
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+   ```
+   
 
 
