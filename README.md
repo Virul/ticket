@@ -14,7 +14,7 @@ El sistema contará con un formulario que recopilará la información clave sobr
 
 ## Tabla de contenidos
 - [Requisitos del Sistema](https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
-- [Instalación](https://github.com/Virul/ticket/edit/main/README.md#instalaci%C3%B3n)
+- [Instalación](https://github.com/Virul/ticket?tab=readme-ov-file#instalaci%C3%B3n)
 - [Configuración](https://github.com/Virul/ticket/edit/main/README.md#configuraci%C3%B3n)
 
 
