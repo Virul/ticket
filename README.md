@@ -55,6 +55,19 @@ Primero, necesitas crear una base de datos donde se almacenarán los datos de tu
    ```sql
    CREATE DATABASE ticket;
    ```
+
+   ```sql
+   CREATE TABLE status (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE
+   );
+   ```
+
+   ```sql
+   INSERT INTO status (id, name) VALUES (0, 'Enviado');
+   ```
+   
+   
 2. Crear un Usuario MySQL y Asignar Privilegios
 Después de crear la base de datos, puedes crear un usuario y otorgarles los privilegios necesarios para acceder a la base de datos:
    ``` sql
