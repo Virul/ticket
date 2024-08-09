@@ -72,11 +72,47 @@ Después de configurar la base de datos y crear un usuario, necesitas actualizar
    ```
 
 ### Uso
+Acceso a la Aplicación:
+Abre tu navegador y dirígete a http://localhost:8080
+
+Inicio de Sesión:
+
+Dirígete a la página de Inicio de Sesión.
+Introduce tu usuario y contraseña. (Por defaul el usuario de administador es admin y password admin)
+Haz clic en Iniciar Sesión para acceder a tu cuenta
+
+
 
 ### Contribución
+Contribución
+¡Gracias por tu interés en contribuir a nuestro proyecto!
+
+Guía de Contribución
+Instrucciones Generales: Si deseas contribuir, por favor sigue estos pasos:
+
+Haz un fork del repositorio.
+Crea una rama para tu cambio (git checkout -b nombre-de-tu-rama).
+Realiza tus cambios y realiza commit (git commit -am 'Descripción de los cambios').
+Envía un pull request a nuestra rama develop.
+
 
 ### RoadMap
+Q4 2024
+Lanzamiento de la Versión 1.0:
+Finalización de las características principales.
+Realización de pruebas exhaustivas.
+Corrección de errores críticos.
+Documentación Inicial:
 
+Completar la documentación de usuario.
+Crear tutoriales y guías básicas.
+
+Q1 2025
+Mejoras en la Funcionalidad:
+
+Implementar nuevas características basadas en comentarios de usuarios.
+Optimizar el rendimiento y la escalabilidad del sistema.
+Integración de APIs:
 
 
    
