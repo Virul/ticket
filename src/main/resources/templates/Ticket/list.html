@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Top Navigation</title>
+    <title>Ticket</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css">
+
+
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -36,38 +39,28 @@
             <div class="container">
                 <div class="row">
                     <!-- left column -->
-                <div class="col-md-12">
-                    <!-- general form elements -->
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Agregar usuario</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form th:action="@{/admin/add_user}" th:object="${user}" method="post">
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="username">Usuario:</label>
-                                    <input type="text" class="form-control" id="username" th:field="*{username}" placeholder="Ingresar usuario" required/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password:</label>
-                                    <input type="password" class="form-control" id="password" th:field="*{password}" placeholder="Ingresar password" required/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="role">Rol:</label>
-                                    <select id="role" th:field="*{roles}" class="form-control">
-                                        <option th:value="${role.id}" th:text="${role.name}" th:each="role : ${roles}"></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
-                        </form>
+                    <div class="col-md-12">
+                        <table class="dataTable">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descripción del Problema</th>
+                                <th>Nivel de Urgencia</th>
+                                <th>Impacto</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="ticket : ${tickets}">
+                                <td th:text="${ticket.id}"></td>
+                                <td th:text="${ticket.description}"></td>
+                                <td th:text="${ticket.urgency}"></td>
+                                <td th:text="${ticket.impact}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
@@ -95,7 +88,14 @@
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/dist/js/adminlte.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
+
+<script>
+    $( document ).ready(function() {
+        $('.dataTable').DataTable();
+    });
+</script>
+
 <!-- AdminLTE for demo purposes -->
 </body>
 </html>
-

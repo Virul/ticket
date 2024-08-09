@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class TicketController {
 
@@ -22,6 +24,13 @@ public class TicketController {
     public String addUser(Model model) {
         model.addAttribute("ticket", new Ticket());
         return "Ticket/add_ticket";
+    }
+
+    @GetMapping("/Ticket/list")
+    public String viewTickets(Model model) {
+        List<Ticket> tickets = ticketService.findAllTickets();
+        model.addAttribute("tickets", tickets);
+        return "Ticket/list";
     }
 
     @PostMapping("/Ticket/add_ticket")

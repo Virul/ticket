@@ -63,14 +63,57 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                    <div th:if="${isLider}">
-                        <a href="/admin/add_user">Agregar Usuario</a>
-                        <a href="/Ticket/add_ticket">Captura ticket</a>
+                <div th:if="${isLider}">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <a href="/Ticket/add_ticket">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info"><i class="fa fa-plus"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Captura ticket</span>
+                                        <span class="info-box-number">Capturar un ticket de incidencia.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <a href="/Ticket/list">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info"><i class="fa fa-plus"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Listado ticket</span>
+                                        <span class="info-box-number">Ver el listado de tickets.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <a th:href="@{/logout}">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info"><i class="fa fa-power-off"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Salir</span>
+                                        <span class="info-box-number">Salir del sistema</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-
+                </div>
+                <div th:if="${isTi}">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <a href="/Ticket/accept_Ticket">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info"><i class="fa fa-plus"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Aceptar ticket</span>
+                                        <span class="info-box-number">Aceptar ticket enviados.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
