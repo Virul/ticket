@@ -1,8 +1,16 @@
 # Sistema de ticket
 
-***** Descripción *****
-
+## Descripción
 La aplicación es un sistema de gestión de tickets diseñado para manejar solicitudes dentro de una empresa. Permite a los usuarios enviar cuestionarios que generan tickets personalizados, que pueden ser gestionados a través de un panel de control. Los administradores tienen la capacidad de agregar nuevos usuarios, asignar roles y controlar el flujo de los tickets mediante la actualización de estados. Además, el sistema incluye notificaciones por correo electrónico y funciones de seguridad como la segmentación de usuarios y la encriptación de datos sensibles.
+
+## Problema identificado
+
+## Solución
+
+## Arquitectura
+![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
+
+
 
 
 ***** Requisitos del Sistema *****
@@ -38,5 +46,5 @@ spring.datasource.username=usuario*
 spring.datasource.password=contraseña*
 
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
+
 
