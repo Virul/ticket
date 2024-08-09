@@ -4,8 +4,10 @@
 La aplicación es un sistema de gestión de tickets diseñado para manejar solicitudes dentro de una empresa. Permite a los usuarios enviar cuestionarios que generan tickets personalizados, que pueden ser gestionados a través de un panel de control. Los administradores tienen la capacidad de agregar nuevos usuarios, asignar roles y controlar el flujo de los tickets mediante la actualización de estados. Además, el sistema incluye notificaciones por correo electrónico y funciones de seguridad como la segmentación de usuarios y la encriptación de datos sensibles.
 
 ## Problema identificado
+La problemática a abordar es la gestión y seguimiento de órdenes de servicio para modificaciones de sistema, que actualmente se realiza mediante un Excel, lo cual genera una falta de información crucial y la pérdida de datos importantes. Implementar un sistema permitirá centralizar la información, enviar alertas y rastrear el estado de las solicitudes en tiempo real. Además, el sistema anterior carece de un mecanismo para aceptar requerimientos solucionados, lo que deja tareas pendientes sin una visibilidad clara de su estado actual y contribuye a la pérdida de información valiosa.
 
 ## Solución
+El sistema contará con un formulario que recopilará la información clave sobre la problemática o solicitud del usuario, incluyendo la fecha, hora y datos del solicitante. Al enviar la información, se generará automáticamente un ticket de servicio, el cual podrá ser aceptado o devuelto si la información es incorrecta. Una vez aceptado, se asignará un tiempo estimado y un responsable para su resolución. Los responsables podrán visualizar los tickets pendientes a través de un panel de control, donde se mostrará el estado y la etapa en la que se encuentran. Además, se enviarán notificaciones por correo electrónico cuando se generen, actualicen o resuelvan tickets.
 
 ## Arquitectura
 ![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
@@ -17,7 +19,7 @@ Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cump
 
 - Sistema Operativo: Linux, macOS, Windows
 - Java Development Kit (JDK) 17
-- Spring Framework: Spring Boot 2.7.
+- Spring Framework: Spring Boot 3.3.2
 - Base de Datos: MySQL 8.0.x
 
 
@@ -64,6 +66,7 @@ Después de configurar la base de datos y crear un usuario, necesitas actualizar
    spring.datasource.password=contraseña*
    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
    ```
+
    
 
 
