@@ -83,7 +83,19 @@ Dirígete a la página de Inicio de Sesión.
 Introduce tu usuario y contraseña. (Por defaul el usuario de administador es admin y password admin)
 Haz clic en Iniciar Sesión para acceder a tu cuenta
 
+Crear Usuarios:
+Como usuario administrador haz clic en el enlace de agregar usuario en la página principal.
+Completa el formulario con usuario, contraseña y tipo de usuario.
+Haz clic en Registrar para crear tu cuenta.
 
+Crear Ticket:
+Como usuario lider haz click en el enlace de crear ticket en la pagina principal.
+Completa el formulario.
+Haz click en guardar.
+
+
+Salir del sistema:
+Presiona el boton de salir en el menu principal.
 
 ### Contribución
 Contribución
