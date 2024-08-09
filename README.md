@@ -10,11 +10,9 @@ La aplicación es un sistema de gestión de tickets diseñado para manejar solic
 ## Arquitectura
 ![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
 
+## Tabla de contenidos
 
-
-
-***** Requisitos del Sistema *****
-
+### Requisitos del Sistema
 Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cumpla con los siguientes requisitos:
 
 - Sistema Operativo: Linux, macOS, Windows
@@ -22,10 +20,11 @@ Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cump
 - Spring Framework: Spring Boot 2.7.
 - Base de Datos: MySQL 8.0.x
 
-***** Instalación *****
 
-```
-git clone https://github.com/Virul/ticket
+### Instalación
+1. **Descarga** el repositorio desde GitHub usando el siguiente comando:
+   ```bash
+   git clone https://github.com/Virul/ticket
 ```
 
 ***** Base de datos *****
