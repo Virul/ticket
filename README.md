@@ -13,9 +13,9 @@ El sistema contará con un formulario que recopilará la información clave sobr
 ![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
 
 ## Tabla de contenidos
--[Requisitos del Sistema] (https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
--[Instalación] (https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
--[Configuración] (https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
+- [Requisitos del Sistema](https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
+- [Instalación](https://github.com/Virul/ticket/edit/main/README.md#instalaci%C3%B3n)
+- [Configuración](https://github.com/Virul/ticket/edit/main/README.md#configuraci%C3%B3n)
 
 
 ### Requisitos del Sistema
