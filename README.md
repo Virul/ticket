@@ -16,7 +16,9 @@ El sistema contará con un formulario que recopilará la información clave sobr
 - [Requisitos del Sistema](https://github.com/Virul/ticket/blob/main/README.md#requisitos-del-sistema)
 - [Instalación](https://github.com/Virul/ticket?tab=readme-ov-file#instalaci%C3%B3n)
 - [Configuración](https://github.com/Virul/ticket?tab=readme-ov-file#configuraci%C3%B3n)
-
+- [Uso](https://github.com/Virul/ticket/blob/main/README.md#uso)
+- [Contribución](https://github.com/Virul/ticket/blob/main/README.md#contribuci%C3%B3n)
+- [RoadMap](https://github.com/Virul/ticket/blob/main/README.md#roadmap)
 
 ### Requisitos del Sistema
 Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cumpla con los siguientes requisitos:
@@ -98,21 +100,19 @@ Envía un pull request a nuestra rama develop.
 
 ### RoadMap
 Q4 2024
-Lanzamiento de la Versión 1.0:
-Finalización de las características principales.
-Realización de pruebas exhaustivas.
-Corrección de errores críticos.
-Documentación Inicial:
-
-Completar la documentación de usuario.
-Crear tutoriales y guías básicas.
+- Lanzamiento de la Versión 1.0:
+- Finalización de las características principales.
+- Realización de pruebas exhaustivas.
+- Corrección de errores críticos.
+- Documentación Inicial:
+   - Completar la documentación de usuario.
+   - Crear tutoriales y guías básicas.
 
 Q1 2025
-Mejoras en la Funcionalidad:
-
-Implementar nuevas características basadas en comentarios de usuarios.
-Optimizar el rendimiento y la escalabilidad del sistema.
-Integración de APIs:
+- Mejoras en la Funcionalidad:
+- Implementar nuevas características basadas en comentarios de usuarios.
+- Optimizar el rendimiento y la escalabilidad del sistema.
+- Integración de APIs:
 
 
    
