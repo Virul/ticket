@@ -16,7 +16,9 @@ Antes de instalar y ejecutar esta aplicación, asegúrate de que tu entorno cump
 
 ***** Instalación *****
 
+```
 git clone https://github.com/Virul/ticket
+```
 
 ***** Base de datos *****
 
@@ -36,4 +38,5 @@ spring.datasource.username=usuario*
 spring.datasource.password=contraseña*
 
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+![Arquitectura](https://github.com/user-attachments/assets/18189250-6ee0-427c-8601-01ac5519b65c)
 
